@@ -84,3 +84,7 @@ section .king-pearl .king-pearl-title {
     border-radius: 0.25rem;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
+
+.card {
+    min-width: 160px;
+}

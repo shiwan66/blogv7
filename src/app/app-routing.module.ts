@@ -7,11 +7,13 @@ import { InputComponent } from './input/input.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  {path: '/login', component: LoginComponent},
-  {path: '/task', component: TaskComponent},
-  {path: '/point', component: PointComponent},
-  {path: '/sample', component: SampleComponent},
-  {path: '/input', component: InputComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'task', component: TaskComponent},
+  {path: 'point', component: PointComponent},
+  {path: 'sample', component: SampleComponent},
+  {path: 'input', component: InputComponent},
+  {path: '**', component: LoginComponent}
+  
 ];
 
 @NgModule({

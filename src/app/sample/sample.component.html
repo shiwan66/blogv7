@@ -1,3 +1,82 @@
-<p>
-  sample works!
-</p>
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/style.css" rel="stylesheet">
+
+<!-- font-awesome -->
+<link href="https://magicbox.bk.tencent.com/static_api/v3/assets/fontawesome/css/font-awesome.css" rel="stylesheet">
+<!-- 蓝鲸提供的pc,移动端公用样式库 -->
+<link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+<link href="https://magicbox.bk.tencent.com/static_api/v3/bk_mobile/css/bkui.css" rel="stylesheet">
+
+<div style="background:#fff;">
+  <div class="p15">
+    <p id="projectName">项目名称:&nbsp;&nbsp;</p>
+    <p id="taskCode">任务单编号:&nbsp;&nbsp;</p>
+    <p id="point">
+      <strong>当前测点:</strong>&nbsp;&nbsp;
+    </p>
+  </div>
+</div>
+
+<div>
+  <div class="m15"></div>
+</div>
+
+<div>
+  <div class="bkui-title bkui-font-md bkui-spacing text-warning">
+    现场采样列表
+  </div>
+
+  <div class="row no-gutters" id="insert">
+  </div>
+
+</div>
+
+<div class="nav-menu w-100" style="background: #fff;">
+  <div class="flex_wrap pt5">
+    <div class="king-pearl done flex_1">
+      <a class="king-pearl-icon" href="/task">
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </a>
+      <span class="king-pearl-title">任务列表</span>
+    </div>
+    <div class="king-pearl done flex_1">
+      <a class="king-pearl-icon" href="/point">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+      </a>
+      <span class="king-pearl-title">测点信息</span>
+    </div>
+    <div class="king-pearl current flex_1">
+      <a class="king-pearl-icon" href="/sample">
+        <i class="fa fa-check" aria-hidden="true"></i>
+      </a>
+      <small class="king-pearl-title">采样记录</small>
+    </div>
+    <div class="king-pearl done flex_1">
+      <a class="king-pearl-icon" href="/input">
+        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+      </a>
+      <span class="king-pearl-title">测定结果</span>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="p15 mt15" style="background:#fff;">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <div class="checkbox">
+          <label class="mr10">
+            <input type="checkbox" id="checkall" value="">
+            <span class="ml5" style="vertical-align: top;">全选</span>
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <button type="submit" class="bkui-btn bkui-btn-success bkui-mt15">
+          提交
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
