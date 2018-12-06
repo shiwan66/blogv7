@@ -1,7 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TaskComponent } from './task/task.component';
+import { PointComponent } from './point/point.component';
+import { SampleComponent } from './sample/sample.component';
+import { InputComponent } from './input/input.component';
+import { LoginComponent } from './login/login.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '/login', component: LoginComponent},
+  {path: '/task', component: TaskComponent},
+  {path: '/point', component: PointComponent},
+  {path: '/sample', component: SampleComponent},
+  {path: '/input', component: InputComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
