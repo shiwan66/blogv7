@@ -1,0 +1,125 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.d78b9cad282263df941a.js",
+        "/polyfills.20ab2d163684112c2aba.js",
+        "/runtime.ec2944dd8b20ec099bf3.js",
+        "/styles.3ff695c00d717f2d2a11.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/css/bootstrap-grid.css",
+        "/assets/css/bootstrap-grid.css.map",
+        "/assets/css/bootstrap-grid.min.css",
+        "/assets/css/bootstrap-grid.min.css.map",
+        "/assets/css/bootstrap-reboot.css",
+        "/assets/css/bootstrap-reboot.css.map",
+        "/assets/css/bootstrap-reboot.min.css",
+        "/assets/css/bootstrap-reboot.min.css.map",
+        "/assets/css/bootstrap.css",
+        "/assets/css/bootstrap.css.map",
+        "/assets/css/bootstrap.min.css",
+        "/assets/css/bootstrap.min.css.map",
+        "/assets/css/style.css",
+        "/assets/fonts/glyphicons-halflings-regular.eot",
+        "/assets/fonts/glyphicons-halflings-regular.svg",
+        "/assets/fonts/glyphicons-halflings-regular.ttf",
+        "/assets/fonts/glyphicons-halflings-regular.woff",
+        "/assets/fonts/glyphicons-halflings-regular.woff2",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/js/albedo.jquery.replenish.js",
+        "/assets/js/bootstrap.min.js",
+        "/assets/js/jquery.min.js",
+        "/assets/js/popper.min.js",
+        "/assets/js/scripts.js"
+      ],
+      "patterns": [
+        "https:\\/\\/magicbox\\.bk\\.tencent\\.com\\/static_api\\/v3\\/assets\\/fontawesome\\/css\\/font-awesome\\.css",
+        "https:\\/\\/magicbox\\.bk\\.tencent\\.com\\/static_api\\/v3\\/bk\\/css\\/bk\\.css",
+        "https:\\/\\/magicbox\\.bk\\.tencent\\.com\\/static_api\\/v3\\/bk_mobile\\/css\\/bkui\\.css",
+        "https:\\/\\/magicbox\\.bk\\.tencent\\.com\\/static_api\\/v3\\/bk_mobile\\/assets\\/js\\/jquery-2\\.0\\.0\\.min\\.js",
+        "https:\\/\\/magicbox\\.bk\\.tencent\\.com\\/static_api\\/v3\\/bk_mobile\\/js\\/bkui\\.js",
+        "https:\\/\\/magicbox\\.bk\\.tencent\\.com\\/static_api\\/v3\\/bk_mobile\\/assets\\/bkdialog-1\\.0\\/js\\/bkdialog\\.min\\.js",
+        "https:\\/\\/magicbox\\.bk\\.tencent\\.com\\/static_api\\/v3\\/bk_mobile\\/assets\\/echart-3\\.3\\.1\\/echarts\\.min\\.js"
+      ]
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/css/bootstrap-grid.css": "914eba1666e6e2a603af19e484314f4d50bd5f16",
+    "/assets/css/bootstrap-grid.css.map": "c6fdf178983b290aae35b1a89096c2b0e54e1660",
+    "/assets/css/bootstrap-grid.min.css": "43391b08be49885f7dfbbd113e5dcfff0b74abb4",
+    "/assets/css/bootstrap-grid.min.css.map": "0361c36acca8ecbb0ed5385126e817fb074c7a98",
+    "/assets/css/bootstrap-reboot.css": "d69565f05c01608daec2602e31ffb337f722761f",
+    "/assets/css/bootstrap-reboot.css.map": "eea1fddcda314284005a38560fdaf9dd94b54b73",
+    "/assets/css/bootstrap-reboot.min.css": "25dacc70d777164c6216c22f4ec6db813d0163c6",
+    "/assets/css/bootstrap-reboot.min.css.map": "c981505adf88b994a68da48780ce612305342d72",
+    "/assets/css/bootstrap.css": "928f1c2f45c4935230289878ac4f200aaab8c453",
+    "/assets/css/bootstrap.css.map": "23954214e326ee1f45bf125b83a23e5c6a4c1fae",
+    "/assets/css/bootstrap.min.css": "c68f6706b20034a8f88367fdcdba7055068b8ffc",
+    "/assets/css/bootstrap.min.css.map": "7b24558ead186f5f4f6be7d78d1f503a1af31c0b",
+    "/assets/css/style.css": "9025aee304b9a1a5c1027600524edce75c11ee00",
+    "/assets/fonts/glyphicons-halflings-regular.eot": "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3",
+    "/assets/fonts/glyphicons-halflings-regular.svg": "4dcf0ab896f5417047f881de91bad10dcbda48c6",
+    "/assets/fonts/glyphicons-halflings-regular.ttf": "44bc1850f570972267b169ae18f1cb06b611ffa2",
+    "/assets/fonts/glyphicons-halflings-regular.woff": "278e49a86e634da6f2a02f3b47dd9d2a8f26210f",
+    "/assets/fonts/glyphicons-halflings-regular.woff2": "ca35b697d99cae4d1b60f2d60fcd37771987eb07",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/js/albedo.jquery.replenish.js": "d1093a1bd246777aad2763db9ec63dc24e4f7abe",
+    "/assets/js/bootstrap.min.js": "a61be5edb34283f5237902a39701b546564e108d",
+    "/assets/js/jquery.min.js": "0c3192b500a4fd550e483cf77a49806a5872185b",
+    "/assets/js/popper.min.js": "27467d45d316cf956c59106ecebec6b21592d81a",
+    "/assets/js/scripts.js": "4e1ca59aed1dd14309e086aecb0c5ab852030446",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/index.html": "9ea2b9f36b2cb3f4dc146c5c4a62e2affc8f9053",
+    "/main.d78b9cad282263df941a.js": "3fd605c25f008bbea3fa0a2e4b9f82614c439dac",
+    "/polyfills.20ab2d163684112c2aba.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
+    "/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/styles.3ff695c00d717f2d2a11.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
