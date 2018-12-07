@@ -105,14 +105,15 @@ export class InputComponent implements OnInit {
                             var list = JSON.parse(params[0].json);
                             var domStr3 = "";
                             for(var i = 0; i< list.length; i++) {
+                                let val = list[i].value != null?list[i]: '';
                                 domStr3+=
-                                    '<label id="'+params.id+'" class="bkui-group-cell">'+
+                                    '<label class="bkui-group-cell">'+
                                         '<span class="w-100">'+
                                             '<small>'+
                                                 '<strong class="name">'+list[i].name+'</strong>'+
                                             '</small>'+
                                         '</span>'+
-                                        '<input class="bkui-input" type="number" id="'+list[i].key+'" name="'+list[i].key+'" value="'+list[i].value?list[i].value:'' + '"  placeholder="请输入请输入测量值" />'+
+                                        '<input class="bkui-input" type="number" id="'+list[i].key+'" name="'+list[i].key+'" value="'+ val + ' placeholder="请输入请输入测量值" />'+
                                         '<span class="unit">'+list[i].unit+'</span>'+
                                     '</label>'                        
                             }
@@ -126,9 +127,7 @@ export class InputComponent implements OnInit {
             
             function save(change) {
                 var list1 = [];
-                var paramsId;
                 $("#params-form").find("label").each(function() {
-                    paramsId = $(this).attr("id");
                     let name = $(this).find('.name').text();
                     let key = $(this).find('input').attr('id');
                     let value = $(this).find('input').val();
