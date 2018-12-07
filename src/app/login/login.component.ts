@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
                         success: function(res) {
                             localStorage.setItem("jhi-authenticationtoken", res.id_token);
                             localStorage.setItem('login', username);
-                            location.href="/index.html"
+                            location.href="/task"
                         }
                     })
                 })
