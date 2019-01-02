@@ -5,6 +5,7 @@ import { PointComponent } from './point/point.component';
 import { SampleComponent } from './sample/sample.component';
 import { InputComponent } from './input/input.component';
 import { LoginComponent } from './login/login.component';
+import { CameraComponent } from './camera/camera.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'point', component: PointComponent},
   {path: 'sample', component: SampleComponent},
   {path: 'input', component: InputComponent},
+  {path: 'camera', component: CameraComponent},
   {path: '**', component: LoginComponent}
   
 ];

@@ -10,6 +10,7 @@ import { PointComponent } from './point/point.component';
 import { SampleComponent } from './sample/sample.component';
 import { InputComponent } from './input/input.component';
 import { LoginComponent } from './login/login.component';
+import { CameraComponent } from './camera/camera.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LoginComponent } from './login/login.component';
     PointComponent,
     SampleComponent,
     InputComponent,
-    LoginComponent
+    LoginComponent,
+    CameraComponent
   ],
   imports: [
     BrowserModule,
