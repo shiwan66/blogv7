@@ -67,6 +67,15 @@ export class CameraComponent implements OnInit {
       <script type="text/javascript">load();</script>
 			`
     )
+
+    var player = document.getElementById('player');
+    
+      var handleSuccess = function(stream) {
+        (<any>player).srcObject = stream;
+      };
+    
+      navigator.mediaDevices.getUserMedia({video: true})
+          .then(handleSuccess);
 	 }
 
 }

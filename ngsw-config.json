@@ -27,7 +27,8 @@
           "https://magicbox.bk.tencent.com/static_api/v3/bk_mobile/assets/js/jquery-2.0.0.min.js",
           "https://magicbox.bk.tencent.com/static_api/v3/bk_mobile/js/bkui.js",
           "https://magicbox.bk.tencent.com/static_api/v3/bk_mobile/assets/bkdialog-1.0/js/bkdialog.min.js",
-          "https://magicbox.bk.tencent.com/static_api/v3/bk_mobile/assets/echart-3.3.1/echarts.min.js"
+          "https://magicbox.bk.tencent.com/static_api/v3/bk_mobile/assets/echart-3.3.1/echarts.min.js",
+          "https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"
         ]
       }
     }

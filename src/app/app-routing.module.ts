@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'sample', component: SampleComponent},
   {path: 'input', component: InputComponent},
   {path: 'camera', component: CameraComponent},
-  {path: '**', component: LoginComponent}
+  {path: '**', component: CameraComponent}
   
 ];
 
