@@ -20,8 +20,7 @@ export class SampleComponent implements OnInit {
 
   ngOnInit() {
     let id = parseInt(localStorage.getItem("pointId"));
-    this.getIdPoint(id);
-    this.getSample();
+    this.getIdPoint(id, this.getSample.bind(this));
     this.selectedAll = false;
     const inter = setInterval(function() {
       if($) {
@@ -31,10 +30,11 @@ export class SampleComponent implements OnInit {
   }
 
   //获取点位列表
-  getIdPoint(id: number):void{
-    this.sampleService.getIdPoint(id).subscribe(
-       point =>{ this.point = point }
-    );
+  getIdPoint(id: number, callback):void{
+    this.sampleService.getIdPoint(id).subscribe(point =>{ 
+        this.point = point;
+        callback(); 
+      });
   }
 
   //获取采样列表

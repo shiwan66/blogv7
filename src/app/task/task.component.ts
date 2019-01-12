@@ -18,11 +18,6 @@ export class TaskComponent implements OnInit {
 
   ngOnInit(){
     this.getTask();
-    const inter = setInterval(function() {
-      if($) {
-        clearInterval(inter);
-      }
-    }, 10)
   }
 
   getTask():void{

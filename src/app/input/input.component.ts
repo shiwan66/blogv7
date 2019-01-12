@@ -14,7 +14,7 @@ export class InputComponent implements OnInit {
 
   params: Params;
   samples: Sample[];
-  currentSample: Sample;
+  currentSample: Sample = {};
   sampleUsers: SampleUser[];
   list: any;
 

@@ -23,28 +23,28 @@
   </div>
 </div>
 
-<div class="card">
-    <div *ngFor="let task of tasks" class="card-header flex_wrap a-c p0">
+<div *ngFor="let task of tasks" class="card">
+    <div class="card-header flex_wrap a-c p0">
         <a class="bkui-list-item card-link flex_1" data-toggle="collapse" data-parent="#card-994736" [class.selected]="task === selectedTask" (click)="onSelect(task)">
             <span class="bkui-list-fl">
                 <strong>任务编号：<span class="customer" [id]="task.id">{{task.code}}</span></strong>
             </span>
             <i class="fa fa-angle-right bkui-list-fr bkui-list-fricon" (click)="getPoint(task)"></i>
         </a>
-        <div *ngIf="selectedTask === task">
-            <div class="card-body p15">
-                <ul class="list-unstyled">
-                    <li class="list-item">
-                        项目编号： {{selectedTask.id}}
-                    </li>
-                    <li class="list-item">
-                        项目名称： {{selectedTask.name}}
-                    </li>
-                    <li class="list-item">
-                        行政区域： {{selectedTask.areaName}}
-                    </li>
-                </ul>
-            </div>
+    </div>
+    <div *ngIf="selectedTask === task">
+        <div class="card-body p15">
+            <ul class="list-unstyled">
+                <li class="list-item">
+                    项目编号： {{selectedTask.id}}
+                </li>
+                <li class="list-item">
+                    项目名称： {{selectedTask.name}}
+                </li>
+                <li class="list-item">
+                    行政区域： {{selectedTask.areaName}}
+                </li>
+            </ul>
         </div>
     </div>
 </div>
