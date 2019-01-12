@@ -9,8 +9,8 @@
 
 <div style="background:#fff;">
   <div class="p15">
-    <p id="projectName">项目名称:&nbsp;&nbsp;</p>
-    <p id="taskCode">任务单编号:&nbsp;&nbsp;</p>
+    <p id="projectName">项目名称:&nbsp;&nbsp;{{task.project.name}}</p>
+    <p id="taskCode">任务单编号:&nbsp;&nbsp;{{task.code}}</p>
   </div>
   <div></div>
 </div>
@@ -24,6 +24,20 @@
 
   </div>
 </div>
+
+<div>
+  <div *ngFor="let point of points"  class="card-header flex_wrap a-c p0">
+    <a class="bkui-list-item card-link flex_1" href="javascript:void(0);" id="point.id"> 
+      <span class="bkui-list-fl">  {{point.name}} 
+          <div> 
+              <small>编号: {{point.code}}&nbsp;&nbsp;&nbsp;名称: {{point.name}}</small>
+          </div>
+      </span>
+      <i class="fa fa-angle-right bkui-list-fr bkui-list-fricon" (click)="onClick(point)"></i>
+    </a>
+  </div>
+</div>
+
 
 <div class="nav-menu w-100" style="background: #fff;">
   <div class="flex_wrap pt5">
