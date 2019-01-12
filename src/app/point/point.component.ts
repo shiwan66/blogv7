@@ -51,7 +51,7 @@ export class PointComponent implements OnInit {
                             for (var i = 0; i < res.length; i++) {
                                 let item = res[i];
                                 let domStr =
-                                    '<a class="bkui-list-item" href="javascript:void(0);" id="'+item.id+'">' +
+                                    '<a class="bkui-list-item" id="'+item.id+'">' +
                                         '<span class="bkui-list-fl">' + item.name +
                                             '<div>' +
                                                 '<small>编号: '+item.code+'&nbsp;&nbsp;&nbsp;名称: '+item.name+'</small>'+

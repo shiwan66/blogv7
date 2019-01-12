@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+.bkui-list-item .bkui-list-fricon {
+    padding-left: 80px;
+}

@@ -75,11 +75,11 @@ export class SampleComponent implements OnInit {
                                                   '<input type="radio" class="bkui-check" name="radio'+item.id+'" id="x0">'+
                                                   '<span class="bkui-choice-icon">'+item.code+'</span>'+
                                               '</div>'+
-                                              '<a class="bkui-list-item card-link flex_1 p0" href="javascript:void(0);" id="'+item.id+'">'+
+                                              '<a class="bkui-list-item card-link flex_1 p0" id="'+item.id+'">'+
                                                   '<span class="bkui-list-fl text-center '+className+'">'+
                                                       status+
                                                   '</span>'+
-                                                  '<i class="fa fa-angle-right bkui-list-fr bkui-list-fricon"></i>'+
+                                                  '<i class="fa fa-angle-right bkui-list-fr bkui-list-fricon" style="padding-left:0;"></i>'+
                                               '</a>'+
                                           '</div>'+
                                           '<div class="card-body p15">'+
@@ -101,8 +101,8 @@ export class SampleComponent implements OnInit {
                               $('#insert').append(domStr);
                           }
                           setTimeout(function() {
-                              $('i.fa-angle-right').on('click', function() {
-                                  var id = $(this).parent('a').attr('id');
+                              $('.bkui-list-item').on('click', function() {
+                                  var id = $(this).attr('id');
                                   if(id) {
                                       localStorage.setItem("sampleId", id)
                                       location.href="/input"
