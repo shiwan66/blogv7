@@ -34,7 +34,7 @@
                       <input type="checkbox" class="bkui-check" name="radioitem.id" id="x0" (click)="onCheck(sample)" [checked]="selectedAll">
                       <span class="bkui-choice-icon">{{sample.code}}</span>
                   </div>
-                  <a class="bkui-list-item card-link flex_1 p0" href="javascript:void(0);" id="{{sample.id}}" [ngSwitch]="sample?.status">
+                  <a class="bkui-list-item card-link flex_1 p0" (click)="onClick(sample)" id="{{sample.id}}" [ngSwitch]="sample?.status">
                       <span *ngSwitchCase="'PLAN'" class="bkui-list-fl text-center text-muted">
                           未开始
                       </span>
@@ -44,7 +44,7 @@
                       <span *ngSwitchDefault class="bkui-list-fl text-center text-success">
                           已完成
                       </span>
-                      <i class="fa fa-angle-right bkui-list-fr bkui-list-fricon" (click)="onClick(sample)"></i>
+                      <i class="fa fa-angle-right bkui-list-fr bkui-list-fricon" [ngStyle]="{'padding-left':0}"></i>
                   </a>
               </div>
               <div class="card-body p15">
@@ -63,7 +63,27 @@
           </div>
       </div>
   </div>
+</div>
 
+<div>
+  <div class="p15 mt15" style="background:#fff;padding-bottom: 80px !important;">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <div class="checkbox">
+          <label class="mr10">
+            <input type="checkbox" id="checkall" value="" (click)="selectAll()" [checked]="selectedAll">
+            <span class="ml5" style="vertical-align: top;">全选</span>
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <button type="submit" class="bkui-btn bkui-btn-success bkui-mt15" (click)="submit()">
+          提交
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
 
 <div class="nav-menu w-100" style="background: #fff;">
@@ -92,26 +112,5 @@
       </a>
       <span class="king-pearl-title">测定结果</span>
     </div>
-  </div>
-</div>
-
-<div>
-  <div class="p15 mt15" style="background:#fff;">
-    <form class="form-horizontal">
-      <div class="form-group">
-        <div class="checkbox">
-          <label class="mr10">
-            <input type="checkbox" id="checkall" value="" (click)="selectAll()" [checked]="selectedAll">
-            <span class="ml5" style="vertical-align: top;">全选</span>
-          </label>
-        </div>
-      </div>
-      <div class="form-group">
-
-        <button type="submit" class="bkui-btn bkui-btn-success bkui-mt15" (click)="submit()">
-          提交
-        </button>
-      </div>
-    </form>
   </div>
 </div>

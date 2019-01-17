@@ -22,11 +22,6 @@ export class SampleComponent implements OnInit {
     let id = parseInt(localStorage.getItem("pointId"));
     this.getIdPoint(id, this.getSample.bind(this));
     this.selectedAll = false;
-    const inter = setInterval(function() {
-      if($) {
-        clearInterval(inter);
-      }
-    }, 10)
   }
 
   //获取点位列表

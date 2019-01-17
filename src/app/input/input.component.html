@@ -23,8 +23,8 @@
           <small>样品编号</small>
         </strong>
       </span>
-      <select #select id="sampleCode" value="" class="bkui-select" placeholder="下拉选框" (change)="sampleCodeChange(select.value)">
-        <option [value]="currentSample.id" *ngFor="let sample of samples">{{sample.code}}</option>
+      <select #select id="sampleCode" class="bkui-select" placeholder="下拉选框" (change)="sampleCodeChange(select.value)">
+        <option *ngFor="let sample of samples" [value]="sample.id" >{{sample.code}}</option>
       </select>
     </label>
   </form>
@@ -42,7 +42,7 @@
           <strong>* 采样时间</strong>
         </small>
       </span>
-      <input id="sampleDate" class="bkui-date" type="date" name="user_date" placeholder="年　月　日" [value]="currentSample.sampleDate"/>
+      <input id="sampleDate" class="bkui-date" type="date" name="sampleDate" placeholder="年　月　日" [(ngModel)]="currentSample.sampleDate"/>
     </label>
     <label class="bkui-group-cell">
       <span class="w-100">
@@ -51,14 +51,14 @@
         </small>
       </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <select id="user1" class="bkui-select" placeholder="下拉选框">
+      <select id="user1" name="user1" [(ngModel)]="user1Id" (ngModelChange)="userChange('user1')" class="bkui-select" placeholder="下拉选框">
           <ng-container *ngIf="currentSample.user1">
-              <option *ngFor="let user of sampleUsers" [value]="currentSample.user1.id">{{user.name}}</option>
+              <option *ngFor="let user of sampleUsers" [value]="user.id">{{user.name}}</option>
           </ng-container>
       </select>
-      <select id="user2" class="bkui-select" placeholder="下拉选框">
+      <select id="user2" name="user2" [(ngModel)]="user2Id" (ngModelChange)="userChange('user2')" class="bkui-select" placeholder="下拉选框">
           <ng-container *ngIf="currentSample.user2">
-            <option *ngFor="let user of sampleUsers" [value]="currentSample.user2.id">{{user.name}}</option>
+            <option *ngFor="let user of sampleUsers" [value]="user.id">{{user.name}}</option>
           </ng-container>
       </select>
     </label>
@@ -68,7 +68,7 @@
           <strong>* 大气压</strong>
         </small>
       </span>
-      <input id="dqy" class="bkui-input" type="number" placeholder="请输入请输入测量值" [value]="currentSample.dqy"/>
+      <input id="dqy" name="dqy" class="bkui-input" type="number"  placeholder="请输入请输入测量值" [(ngModel)]="currentSample.dqy" #baseInput/>
       <span>Pa</span>
     </label>
     <label class="bkui-group-cell">
@@ -77,7 +77,7 @@
           <strong>* 风向</strong>
         </small>
       </span>
-      <input id="fx" class="bkui-input" placeholder="请输入请输入测量值"  [value]="currentSample.fx"/>
+      <input id="fx"  name="fx" class="bkui-input" placeholder="请输入请输入测量值"  [(ngModel)]="currentSample.fx"/>
       <span></span>
     </label>
     <label class="bkui-group-cell">
@@ -86,7 +86,7 @@
           <strong>* 风速</strong>
         </small>
       </span>
-      <input id="fs" class="bkui-input" placeholder="请输入请输入测量值"  [value]="currentSample.fs"/>
+      <input id="fs" name="fs" class="bkui-input" placeholder="请输入请输入测量值"  [(ngModel)]="currentSample.fs"/>
       <span>m/s</span>
     </label>
     <label class="bkui-group-cell">
@@ -95,7 +95,7 @@
           <strong>* 温度</strong>
         </small>
       </span>
-      <input id="wd" class="bkui-input" placeholder="请输入请输入测量值"  [value]="currentSample.wd"/>
+      <input id="wd" name="wd" class="bkui-input" placeholder="请输入请输入测量值"  [(ngModel)]="currentSample.wd"/>
       <span>℃</span>
     </label>
     <label class="bkui-group-cell">
@@ -104,7 +104,7 @@
           <strong>* 相对湿度</strong>
         </small>
       </span>
-      <input id="xdsd" class="bkui-input" placeholder="请输入请输入测量值"  [value]="currentSample.xdsd"/>
+      <input id="xdsd" name="xdsd" class="bkui-input" placeholder="请输入请输入测量值"  [(ngModel)]="currentSample.xdsd"/>
       <span></span>
     </label>
 
@@ -114,14 +114,13 @@
     <div id="paramsInsert" class="bkui-title bkui-font-sm bkui-spacing">
       现场采样录入
     </div>
-    <div *ngFor="let param of list">
+    <div *ngFor="let param of list;let i = index;">
         <label class="bkui-group-cell">
          <span class="w-100">
-             <small>
-                 <strong class="name">{{param.name}}</strong>
-             </small>
+            <small><strong class="name">{{param.name}}</strong></small>
          </span>
-         <input class="bkui-input" type="number" [id]="param.key" [name]="param.key" [value]="param.value"   placeholder="请输入请输入测量值" />
+         <input *ngIf="!i" class="bkui-input" type="number" [id]="param.key" name="{{param.key}}" [(ngModel)]="param.value" placeholder="请输入请输入测量值" #paramInput />
+         <input *ngIf="i" class="bkui-input" type="number" [id]="param.key" name="{{param.key}}" [(ngModel)]="param.value" placeholder="请输入请输入测量值"  />
          <span class="unit">{{param.unit}}</span>
      </label>
      </div>
@@ -129,10 +128,10 @@
 
   <div class="bkui-section bkui-spacing">
     <div class="bkui-hd">
-      <button (click)="save()" onclick="submit(true)" class="bkui-btn bkui-btn-default bkui-mt15">
+      <button (click)="submit(true)" class="bkui-btn bkui-btn-default bkui-mt15">
         保存
       </button>
-      <button (click)="submit()" onclick="submit(false)" class="bkui-btn bkui-btn-success bkui-mt15">
+      <button (click)="submit(false)" class="bkui-btn bkui-btn-success bkui-mt15">
         提交
       </button>
     </div>

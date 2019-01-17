@@ -10,8 +10,10 @@ declare var $: any;
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
-  tasks: Task[];
+  tasks: Task[] = [];
+  currentTasks: Task[] = [];
   selectedTask: Task;
+  search: string = "";
 
   constructor(private sampleService: SampleService,
     private router: Router) { }
@@ -21,8 +23,10 @@ export class TaskComponent implements OnInit {
   }
 
   getTask():void{
-    this.sampleService.getTask()
-      .subscribe(tasks => this.tasks = tasks);
+    this.sampleService.getTask().subscribe(tasks => {
+      this.tasks = tasks
+      this.currentTasks = this.tasks;
+    });
   }
 
   onSelect(task: Task): void {
@@ -33,5 +37,9 @@ export class TaskComponent implements OnInit {
   getPoint(task: Task):void{
     localStorage.setItem("taskId", task.id+"");
     this.router.navigate(['/point']);
+  }
+
+  filterTask() {
+    this.currentTasks = this.tasks.filter(item => item.code.indexOf(this.search) > -1);
   }
 }

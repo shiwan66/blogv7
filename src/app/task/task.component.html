@@ -11,7 +11,7 @@
   <div class="bkui-search-box p15" id="search1_demo1">
       <div class="bkui-search-input">
           <span class="bkui-search-btn icon fa fa-search mt5 f14"> </span>
-          <input class="bkui-search-inputtext" placeholder="搜索">
+          <input class="bkui-search-inputtext" name="search" [(ngModel)]="search" (ngModelChange)="filterTask()" placeholder="搜索">
           <button class="bkui-close-btn"></button>
       </div>
   </div>
@@ -23,9 +23,9 @@
   </div>
 </div>
 
-<div *ngFor="let task of tasks" class="card">
+<div *ngFor="let task of currentTasks" class="card">
     <div class="card-header flex_wrap a-c p0">
-        <a class="bkui-list-item card-link flex_1" data-toggle="collapse" data-parent="#card-994736" [class.selected]="task === selectedTask" (click)="onSelect(task)">
+        <a class="bkui-list-item card-link flex_1" data-toggle="collapse" data-parent="#card-994736" [class.active]="task === selectedTask" (click)="onSelect(task)">
             <span class="bkui-list-fl">
                 <strong>任务编号：<span class="customer" [id]="task.id">{{task.code}}</span></strong>
             </span>

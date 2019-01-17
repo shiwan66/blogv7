@@ -22,11 +22,6 @@ export class PointComponent implements OnInit {
     id = parseInt(localStorage.getItem("taskId"));
     this.getIdTask(id);
     this.getPoints();
-    const inter = setInterval(function() {
-      if($) {
-        clearInterval(inter);
-      }
-    }, 10)
   }
 
   getIdTask(id: number):void{

@@ -108,7 +108,17 @@ export class SampleService {
         'Authorization':  `Bearer  ${localStorage.getItem('jhi-authenticationtoken')}`
       })
     };
-    return this.http.post<any>(this.getParamsUrl,params,httpOptions);
+    return this.http.put<any>(this.getParamsUrl,params,httpOptions);
+  }
+
+  putSample(sample: Sample):Observable<any>{
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization':  `Bearer  ${localStorage.getItem('jhi-authenticationtoken')}`
+      })
+    };
+    return this.http.put<any>(this.getSampleUrl,sample,httpOptions);
   }
 
   getSampleUsers():Observable<SampleUser[]>{
