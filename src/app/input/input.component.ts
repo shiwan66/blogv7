@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SampleService } from '../sample.service';
-import { Router, Params } from '@angular/router';
+import { Router } from '@angular/router';
 import { Sample } from '../model/Sample';
 import { SampleUser } from '../model/SampleUser';
 import { Params } from '../model/Params';
