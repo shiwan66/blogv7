@@ -11,6 +11,9 @@ import { SampleComponent } from './sample/sample.component';
 import { InputComponent } from './input/input.component';
 import { LoginComponent } from './login/login.component';
 
+// head组件
+import {HeadComponent} from './head/head.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,8 @@ import { LoginComponent } from './login/login.component';
     PointComponent,
     SampleComponent,
     InputComponent,
-    LoginComponent
+    LoginComponent,
+    HeadComponent
   ],
   imports: [
     BrowserModule,
