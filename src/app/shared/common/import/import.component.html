@@ -1,0 +1,31 @@
+<div id="main" class="h-100">
+  <div class="header">
+      <h1><i class="iconfont text-primary">&#xe6a5;</i><ng-container >批量</ng-container>【{{title}}】<ng-container i18n="@@import02">导入</ng-container></h1>
+  </div>
+  <div class="container" [ngStyle]="{paddingTop: '30px'}" >
+    <div class="p20">
+      <div class="card">
+        <!-- <div class="card-header">
+          <ng-container >批量</ng-container>【{{title}}】<ng-container i18n="@@import02">导入</ng-container>
+        </div> -->
+        <div class="card-body row">
+            <div class="col-md-4 br-r br-grey">
+                <h3 class="mb25"> <ng-container i18n="@@import03">导入说明</ng-container>:</h3>
+                <p class="mb15">
+                  <span class="fa fa-check text-success pr5"></span> <ng-container i18n="@@import04">首先下载导入模板压缩文件后进行解压缩</ng-container></p>
+                <p class="mb15">
+                  <span class="fa fa-check text-success pr5"></span> <ng-container i18n="@@import05">打开解压后的“上传模板”进行编辑</ng-container></p>
+                <p class="mb15">
+                  <span class="fa fa-check text-success pr5"></span> <ng-container i18n="@@import06">将商品所需要的图片放置“images”文件夹内</ng-container></p>
+                <p class="mb15">
+                  <span class="fa fa-check text-success pr5"></span> <ng-container i18n="@@import07">将编辑完成后的文件夹压缩成 *zip文件 后上传导入</ng-container></p>
+            </div>
+            <div class="col-md-8 mt30  pl30">
+              <ng-content></ng-content>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-switch-menu></app-switch-menu>

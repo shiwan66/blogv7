@@ -1,0 +1,32 @@
+<div class="w-100">
+  <div id="header" class="w-100">
+    <div id="header-wrap" class="col">
+      <img src="/assets/history/img/sbbs.svg" class="header-logo" alt="">
+      <span class="header-title">报表打印</span>
+    </div>
+  </div>
+  <div id="main">
+    <div class="card">
+      <div class="card-header row">
+        <div class="col-md-3">
+          <select name="instrument" id="instrument" class="form-control" [(ngModel)]="instrumentId" (ngModelChange)="selectChange($event)"
+            [disabled]="!instruments||instruments&&instruments.length==0">
+            <option *ngFor="let instrument of instruments" [value]="instrument">{{instrument}}</option>
+          </select>
+        </div>
+        <div class="col-md-1">
+          <span class="form-control">{{ measureId }} &nbsp;</span>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-primary" type="button" [disabled]="!measureId" (click)="downloadReport()">生成报表</button>
+            <!-- <button class="btn btn-primary" type="button" [disabled]="!measureId">打印报表</button> -->
+        </div>
+      </div>
+      <div class="card-body">
+        <app-report-table *ngIf="measures" [data]="measures" (clickItem)="clickItem($event)"></app-report-table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-switch-menu></app-switch-menu>

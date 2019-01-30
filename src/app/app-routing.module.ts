@@ -5,6 +5,7 @@ import { PointComponent } from './point/point.component';
 import { SampleComponent } from './sample/sample.component';
 import { InputComponent } from './input/input.component';
 import { LoginComponent } from './login/login.component';
+import {ProjectProgressComponent} from './project-progress/project-progress.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'point', component: PointComponent},
   {path: 'sample', component: SampleComponent},
   {path: 'input', component: InputComponent},
+  {path:'project-progress',component:ProjectProgressComponent},
   {path: '**', component: LoginComponent}
   
 ];

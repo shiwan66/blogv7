@@ -1,0 +1,6 @@
+<div class="h-100">
+    <ng-table *ngIf="data && data.length" [config]="config" (tableChanged)="onChangeTable(config)" (cellClicked)="onCellClick($event)"
+      [rows]="rows" [columns]="columns">
+    </ng-table>
+    <pagination [totalItems]="length" [(ngModel)]="page" [rotate]="false" [maxSize]="maxSize" (pageChanged)="pageChanged($event)" [firstText]="firstText" [lastText]="lastText" [previousText]="previousText" [nextText]="nextText" ></pagination>
+</div>

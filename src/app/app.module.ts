@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 
 // head组件
 import {HeadComponent} from './head/head.component';
+import {TaskStatisticComponent} from './task-statistic/task-statistic.component';
+import {ProjectProgressComponent} from './project-progress/project-progress.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {HeadComponent} from './head/head.component';
     SampleComponent,
     InputComponent,
     LoginComponent,
-    HeadComponent
+    HeadComponent,
+    TaskStatisticComponent,
+    ProjectProgressComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+
+/* header style */
+#header {
+    z-index: 5;
+    box-sizing: border-box;
+    height:190px;
+    padding: 40px 80px 0 80px;
+    background: -webkit-linear-gradient(#003f94, #00a0da); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#003f94, #00a0da); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#003f94, #00a0da); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#003f94, #00a0da); /* 标准的语法 */
+}
+.header-wrap {
+    height: 150px;
+    padding: 35px 0;
+    box-sizing: border-box;
+}
+.header-logo {
+    display: inline-block;
+    width: 56px;
+    height: 68px;
+    margin-top: 12px;
+    vertical-align: bottom;
+}
+.header-title {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 32px;
+    line-height: 32px;
+    height: 36px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 10px;
+    margin-left: 20px;
+}

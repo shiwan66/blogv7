@@ -1,0 +1,15 @@
+<div *ngIf="show" class="row" style="padding-top: 20px;">
+  <div class="col-md-4">
+    <!-- <input *ngIf="config.filtering" placeholder="搜索所有列......"
+           [ngTableFiltering]="config.filtering"
+           class="form-control"
+           (tableChanged)="onChangeTable(config)"/> -->
+  </div>
+</div>
+<br>
+<ng-table *ngIf="data && data.length" [config]="config"
+          (tableChanged)="onChangeTable(config)"
+          (cellClicked)="onCellClick($event)"
+          [rows]="rows" [columns]="columns">
+</ng-table>
+<pagination [totalItems]="length" [itemsPerPage]="itemsPerPage" [(ngModel)]="page" [rotate]="false" [maxSize]="maxSize" (pageChanged)="pageChanged($event)" [firstText]="firstText" [lastText]="lastText" [previousText]="previousText" [nextText]="nextText" ></pagination>

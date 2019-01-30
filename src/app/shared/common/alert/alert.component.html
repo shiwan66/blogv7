@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-lg-12">
+      <div class="alert alert-success" [ngClass]="{'alert-suceess':model.type=='success','alert-danger':model.type=='danger','alert-warning':model.type=='warning'}">
+          <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+          {{model.message}}
+      </div>
+  </div>
+</div>

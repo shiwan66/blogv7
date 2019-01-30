@@ -1,0 +1,32 @@
+.left-panel {
+    border: 1px solid rgb(0, 166, 254);
+    // border-radius: 12px;
+    margin-top: -1px;
+    // text-align: center;
+    width: 340px;
+    color: #fff;
+    background: rgba(2,28,53, .75);
+    // font-size: 12px;
+    position: absolute;
+    &.active {
+        border: 1px solid #ff00ff;
+    }
+}
+.card-header {
+    padding-left: 50px;
+    background-image: url('/assets/image/new-icon/online.svg');
+    background-size: 30px 30px;
+    background-position: 10px 10px;
+    background-repeat: no-repeat; 
+}
+.working .card-header {
+    background-image: url('/assets/image/new-icon/working.svg');
+}
+.right {
+    color: #fff;
+    margin-right: 15px;
+    font-weight: 200;
+    &.active {
+        color: #ff00ff;
+    }
+}

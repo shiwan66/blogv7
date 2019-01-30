@@ -1,0 +1,11 @@
+<div id="hoverWrap">
+    <div id="switchMenu">
+      <div></div><div></div><div></div>
+      <ul>
+          <ng-container *ngFor="let menu of menus;let i = index;">
+              <li *ngIf="menu.url"><a [routerLink]=[menu.url]>{{menu.title}}</a></li>
+              <li *ngIf="menu.href"><a href="http://47.92.28.186:8080/hnty/a/monitor/device/view">测量过程监控</a></li>
+          </ng-container>
+      </ul>
+    </div>
+</div>

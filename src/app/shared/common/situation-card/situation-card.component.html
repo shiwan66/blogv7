@@ -1,0 +1,12 @@
+<div class="left-panel card" id="{{devMeasure.deviceId}}" [ngClass]="{'active': devMeasure.deviceId == currentDevice.deviceId, 'working': devMeasure.onlineState == '工作'}" >
+	<div class="card-header">
+		{{devMeasure.deviceId}}
+		<button type="button" class="close" (click)="close()">
+			<span aria-hidden="true" style="color:#fff">×</span>
+		</button>
+		<button type="button" class="right close" (click)="select()">
+			<i class="iconfont">&#xe616;</i>
+		</button>
+	</div>
+	<ng-content></ng-content>
+</div>

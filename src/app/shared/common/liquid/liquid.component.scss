@@ -1,0 +1,35 @@
+$scale: 0.2;
+
+.mydemo{display: inline-block;}
+
+.clock{font-size:18px;width:1.85em;height:3em;position:relative;}
+.clock div{position: absolute;border-style:solid;}
+.clock .l,.clock .r,.clock .u,.clock .d{width:0;height:0;overflow:hidden;}
+
+.clock .v{width:0;height:1em;border-width:0 0.1em;border-color:#063877;}
+.clock .v .u{border-style:dotted dotted solid dotted;border-width:0 0.1em 0.1em;border-color:transparent transparent #063877 transparent;top:-0.1em;left:-0.1em;}
+.clock .v .d{border-style:solid dotted dotted dotted;border-width:0.1em 0.1em 0 0.1em;border-color:#063877 transparent transparent transparent;left:-0.1em;bottom:-0.1em}
+
+.clock .h{width:1.1em;height:0;border-width:0.1em 0;border-color:#063877;}
+.clock .h .l{border-style:dotted solid dotted dotted;border-width:0.1em 0.1em 0.1em 0;border-color:transparent #063877 transparent transparent;top:-0.1em;left:-0.1em;}
+.clock .h .r{border-style:dotted dotted dotted solid;border-width:0.1em 0 0.1em 0.1em;border-color:transparent transparent transparent #063877;top:-0.1em;right:-0.1em;}
+
+.clock .n1{left:0.1em;top:0.3em;}
+.clock .n2{left:0.1em;top:1.5em;}
+.clock .n4{left:1.5em;top:1.5em;}
+.clock .n5{left:1.5em;top:0.3em;}
+
+.clock .n6{top:0.08em;left:0.36em;}
+.clock .n3{top:2.5em;left:0.36em;}
+.clock .n7{top:1.3em;left:0.36em;}
+
+.c1 .n1,.c1 .n2,.c1 .n3,.c1 .n6,.c1 .n7{display:none}
+.c2 .n1,.c2 .n4{display:none}
+.c3 .n1,.c3 .n2{display:none}
+.c4 .n2,.c4 .n3,.c4 .n6{display:none}
+.c5 .n2,.c5 .n5{display:none}
+.c6 .n5{display:none}
+.c7 .n1,.c7 .n2,.c7 .n3,.c7 .n7{display:none}
+.c8{}
+.c9 .n2{display:none}
+.c0 .n7{display:none}

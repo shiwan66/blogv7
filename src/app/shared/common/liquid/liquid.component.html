@@ -1,0 +1,15 @@
+<div *ngIf="value != '.'" class="mydemo">
+    <div class="clock c{{value}}">
+  
+      <div class="v n1"><div class="u"></div><div class="d"></div></div>
+      <div class="v n2"><div class="u"></div><div class="d"></div></div>
+      <div class="h n3"><div class="l"></div><div class="r"></div></div>
+      <div class="v n4"><div class="u"></div><div class="d"></div></div>
+      <div class="v n5"><div class="u"></div><div class="d"></div></div>
+      <div class="h n6"><div class="l"></div><div class="r"></div></div>
+      <div class="h n7"><div class="l"></div><div class="r"></div></div>
+    </div>
+  </div>
+  <ng-container *ngIf="value == '.'" >
+    <i class="iconfont">&#xe7a5;</i>
+  </ng-container>
